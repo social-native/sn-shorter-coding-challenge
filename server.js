@@ -13,8 +13,8 @@ const generateContentMetadataForCampaign = (() => {
         
         return R.pipe(
             R.times(() => seededRand.random()),
-            R.map((index) => {
-                const contentMetadataId = uuidv5(index.toString(), CAMPAIGN_NAMESPACE);
+            R.map((seed) => {
+                const contentMetadataId = uuidv5(seed.toString(), CAMPAIGN_NAMESPACE);
                 return { id: contentMetadataId };
             })
         )(numberOfMetadatas);
@@ -23,8 +23,8 @@ const generateContentMetadataForCampaign = (() => {
 
 const generateContentMetadataPerformance = (() => {
     const MAX_FOLLOWERS = 10000;
-    const MAX_LIKES_RATIO = 0.1;
-    const MAX_COMMENTS_RATIO = 0.05;
+    const MAX_LIKES_RATIO = 0.05;
+    const MAX_COMMENTS_RATIO = 0.005;
     
     return (contentMetadataId) => {
         const seededRand = rand.create(contentMetadataId);
