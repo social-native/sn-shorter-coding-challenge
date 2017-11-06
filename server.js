@@ -15,8 +15,7 @@ const generateContentMetadataForCampaign = (() => {
             R.times(() => seededRand.random()),
             R.map((index) => {
                 const contentMetadataId = uuidv5(index.toString(), CAMPAIGN_NAMESPACE);
-                // return { id: contentMetadataId };
-                return generateContentMetadataPerformance(contentMetadataId);
+                return { id: contentMetadataId };
             })
         )(numberOfMetadatas);
     };
