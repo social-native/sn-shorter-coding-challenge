@@ -50,7 +50,7 @@ const MEDIA_NAMESPACE = '90123e1d-7512-523e-bb28-76fab9f2f73d';
 
 const app = express();
 app.get(
-    '/campaign/:id/content_metadatas',
+    '/campaign/:id/all_content_metadata',
     (req, res) => {
         res.json(generateContentMetadataForCampaign(req.params.id.toString()));
     }
