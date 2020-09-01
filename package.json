@@ -6,7 +6,7 @@
   "repository": "",
   "author": "",
   "dependencies": {
-    "express": "~3.2.4",
+    "express": "~4.17.1",
     "ramda": "^0.25.0",
     "random-seed": "^0.3.0",
     "uuid": "^3.1.0"
